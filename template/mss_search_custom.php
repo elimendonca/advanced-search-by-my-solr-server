@@ -10,6 +10,34 @@ function spanOrder($sort, $order, $thisSpan) {
 	return '';
 }
 
+function facetsRename ( $facet ) {
+	 switch ($facet) {
+		case "Xtt-pa-secao" : $facet = "Seção";
+			break;
+		case "Xtt-pa-editorias" : $facet = "Editorias";
+			break;
+		case "Xtt-pa-projetos" : $facet = "Projetos";
+			break;
+		case "Xtt-pa-projetos" : $facet = "Projetos";
+			break;
+		case "Xtt-pa-departamentos" : $facet = "Departamentos";
+			break;
+		case "Xtt-pa-regiao" : $facet = "Região";
+			break;
+		case "Xtt-pa-colecoes" : $facet = "Coleções";
+			break;
+		case "Xtt-pa-midias" : $facet = "Tipos de Mídia";
+			break;
+		case "Xtt-pa-materiais" : $facet = "Tipos de Material";
+			break;
+		case "Xtt-pa-eventos" : $facet = "Eventos";
+			break;
+		case "Xtt-pa-owner" : $facet = "Sede Proprietária";
+			break;
+	}
+	return $facet;
+}
+
 ?>
 
 <?php get_header(); ?>
@@ -42,7 +70,7 @@ function spanOrder($sort, $order, $thisSpan) {
 					<?php 
 					if ($results['facets']['selected']) {
 					    foreach( $results['facets']['selected'] as $selectedfacet) {
-					        printf("<li><span></span><a href=\"%s\">%s&nbsp;<b>x</b></a></li>", $selectedfacet['removelink'], $selectedfacet['name']);
+					        printf("<li><span></span><a href=\"%s\">%s&nbsp;<b>x</b></a></li>", $selectedfacet['removelink'], facetsRename($selectedfacet['name']));
 					    }
 					} 
 					?>
@@ -163,7 +191,7 @@ function spanOrder($sort, $order, $thisSpan) {
 					<?php 
 					if ($results['facets']['selected']) {
 					    foreach( $results['facets']['selected'] as $selectedfacet) {
-					        printf("<li><span></span><a href=\"%s\">%s<b>x</b></a></li>", $selectedfacet['removelink'], $selectedfacet['name']);
+					        printf("<li><span></span><a href=\"%s\">%s<b>x</b></a></li>", $selectedfacet['removelink'], facetsRename($selectedfacet['name'] ));
 					    }
 					} 
 					?>
@@ -176,7 +204,8 @@ function spanOrder($sort, $order, $thisSpan) {
 				foreach($results['facets'] as $facet) {
 				    //if (sizeof($facet["items"]) > 1) { #don't display facets with only 1 value
 				    if (isset($facet['name'])) {
-  						printf("<li>\n<h3>%s</h3>\n", $facet['name']);
+  						printf("<li>\n<h3>%s</h3>\n", facetsRename($facet['name']));
+  						//printf("<li>\n<h3>%s</h3>\n", $facet['name']);
   						mss_print_facet_items($facet["items"], "<ol>", "</ol>", "<li>", "</li>", "<li><ol>", "</ol></li>", "<li>", "</li>");
   						printf("</li>\n");
 				    }
