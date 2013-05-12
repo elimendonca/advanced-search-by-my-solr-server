@@ -43,9 +43,7 @@ function facetsRename ( $facet ) {
 <?php get_header(); ?>
 <div id="content">
 <div class="solr clearfix container">
-	
   <?php $results = mss_search_results(); ?>  
-
 	<div class="solr1 clearfix">
 		<div class="solr_search">
 		    <div class="solr_results_headerL">
