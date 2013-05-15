@@ -34,6 +34,8 @@ function facetsRename ( $facet ) {
 			break;
 		case "Xtt-pa-owner" : $facet = "Sede Proprietária";
 			break;
+		case "Xtt-pa-sedes" : $facet = "Sede Regional";
+			break;
 	}
 	return $facet;
 }
