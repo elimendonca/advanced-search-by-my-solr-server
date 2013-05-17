@@ -12,29 +12,27 @@ function spanOrder($sort, $order, $thisSpan) {
 
 function facetsRename ( $facet ) {
 	 switch ($facet) {
-		case "Xtt-pa-secao" : $facet = "Seção";
+		case "Xtt-pa-secao" : $facet = __("Seção", 'solrmss');
 			break;
-		case "Xtt-pa-editorias" : $facet = "Editorias";
+		case "Xtt-pa-editorias" : $facet = __("Editorias", 'solrmss');
 			break;
-		case "Xtt-pa-projetos" : $facet = "Projetos";
+		case "Xtt-pa-projetos" : $facet = __("Projetos", 'solrmss');
 			break;
-		case "Xtt-pa-projetos" : $facet = "Projetos";
+		case "Xtt-pa-departamentos" : $facet = __("Departamentos", 'solrmss');
 			break;
-		case "Xtt-pa-departamentos" : $facet = "Departamentos";
+		case "Xtt-pa-regiao" : $facet = __("Região", 'solrmss');
 			break;
-		case "Xtt-pa-regiao" : $facet = "Região";
+		case "Xtt-pa-colecoes" : $facet = __("Coleções", 'solrmss');
 			break;
-		case "Xtt-pa-colecoes" : $facet = "Coleções";
+		case "Xtt-pa-midias" : $facet = __("Tipos de Mídia", 'solrmss');
 			break;
-		case "Xtt-pa-midias" : $facet = "Tipos de Mídia";
+		case "Xtt-pa-materiais" : $facet = __("Tipos de Material", 'solrmss');
 			break;
-		case "Xtt-pa-materiais" : $facet = "Tipos de Material";
+		case "Xtt-pa-eventos" : $facet = __("Eventos", 'solrmss');
 			break;
-		case "Xtt-pa-eventos" : $facet = "Eventos";
+		case "Xtt-pa-owner" : $facet = __("Sede Proprietária", 'solrmss');
 			break;
-		case "Xtt-pa-owner" : $facet = "Sede Proprietária";
-			break;
-		case "Xtt-pa-sedes" : $facet = "Sede Regional";
+		case "Xtt-pa-sedes" : $facet = __("Sede Regional", 'solrmss');
 			break;
 	}
 	return $facet;
@@ -52,16 +50,16 @@ function facetsRename ( $facet ) {
 
 				<?php if ($results['hits'] && $results['query'] && $results['qtime']) {
 				    if ($results['firstresult'] === $results['lastresult']) {
-				        printf("Displaying result %s of <span id='resultcnt'>%s</span> hits", $results['firstresult'], $results['hits']);
+				        printf(__("Displaying result %s of <span id='resultcnt'>%s</span> hits", 'solrmss'), $results['firstresult'], $results['hits']);
 				    } else {
-				        printf("Displaying results %s-%s of <span id='resultcnt'>%s</span> hits", $results['firstresult'], $results['lastresult'], $results['hits']);
+				        printf(__("Displaying results %s-%s of <span id='resultcnt'>%s</span> hits", 'solrmss'), $results['firstresult'], $results['lastresult'], $results['hits']);
                     }
 				} ?>
 
 			</div>
 
             <form name="searchbox" method="get" id="searchbox" action="">
-			    <input id="qrybox" name="s" type="text" class="solr_field" value="<?php echo $results['query'] ?>"/><input id="searchbtn" type="submit" value="Search" />
+			    <input id="qrybox" name="s" type="text" class="solr_field" value="<?php echo $results['query'] ?>"/><input id="searchbtn" type="submit" value="<?php _e('Search', 'solrmss');?>" />
             </form>
             <ul class="solr_facets">
             <li class="solr_active">
@@ -80,7 +78,7 @@ function facetsRename ( $facet ) {
 		</div>
 
 		<?php if($results['dym']) {
-			printf("<div class='solr_suggest'>Did you mean: <a href='%s'>%s</a> ?</div>", $results['dym']['link'], $results['dym']['term']);
+			printf(__("<div class='solr_suggest'>Did you mean: <a href='%s'>%s</a> ?</div>", 'solrmss'), $results['dym']['link'], $results['dym']['term']);
 		} ?>
 
 	</div>
@@ -107,11 +105,11 @@ function facetsRename ( $facet ) {
 		<div class="solr_results">
 			
 			<?php if ($results['hits'] === "0") {
-					printf("<div class='solr_noresult'>
-										<h2>Sorry, no results were found.</h2>
-										<h3>Perhaps you mispelled your search query, or need to try using broader search terms.</h3>
-										<p>For example, instead of searching for 'Apple iPhone 3.0 3GS', try something simple like 'iPhone'.</p>
-									</div>\n");
+					printf(__("<div class='solr_noresult'>
+															<h2>Sorry, no results were found.</h2>
+															<h3>Perhaps you mispelled your search query, or need to try using broader search terms.</h3>
+															<p>For example, instead of searching for 'Apple iPhone 3.0 3GS', try something simple like 'iPhone'.</p>
+														</div>\n", 'solrmss'));
 			} else {
 				printf("<ol>\n");
 					foreach($results['results'] as $result) {
@@ -161,7 +159,7 @@ function facetsRename ( $facet ) {
 					}
 					
 					if ($prev !== '') {
-					    printf("<a href='%s'>Previous</a>", $prev);
+					    printf(__("<a href='%s'>Previous</a>", 'solrmss'), $prev);
 					}
 					
 					foreach ($itemlinks as $itemlink) {
@@ -169,7 +167,7 @@ function facetsRename ( $facet ) {
 					}
 					
 					if ($next !== '') {
-					    printf("<a href='%s'>Next</a>", $next);
+					    printf(__("<a href='%s'>Next</a>", 'solrmss'), $next);
 					}
 					
 				printf("</div>\n");
