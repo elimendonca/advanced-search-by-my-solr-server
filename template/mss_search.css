@@ -215,9 +215,21 @@ ol.solr_sort2 {
 	margin-bottom: 3px !important;
 }
 .solr_results em {
-	color: #679E68;
 	font-weight: bold !important;
 }
+
+.noticias .solr_results em {
+	color: #679E68;
+}
+
+.downloads .solr_results em {
+	color: #c16443;
+}
+
+.videos .solr_results em {
+	color: #7AA8C3;
+}
+
 .solr_results label {
 	font-size: 10px !important;
 	color: #666666 !important;
