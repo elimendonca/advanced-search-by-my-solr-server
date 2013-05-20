@@ -76,7 +76,7 @@ class encryption_class {
         if ($this->errors) return;
 
         if (empty($source)) {
-            $this->errors[] = 'No value has been supplied for decryption';
+            $this->errors[] = __('No value has been supplied for decryption', 'solrmss');
             return;
         } // if
 
@@ -135,7 +135,7 @@ class encryption_class {
         if ($this->errors) return;
 
         if (empty($source)) {
-            $this->errors[] = 'No value has been supplied for encryption';
+            $this->errors[] = __('No value has been supplied for encryption', 'solrmss');
             return;
         } // if
 
@@ -263,7 +263,7 @@ class encryption_class {
     // convert $key into an array of numbers
     {
         if (empty($key)) {
-            $this->errors[] = 'No value has been supplied for the encryption key';
+            $this->errors[] = __('No value has been supplied for the encryption key', 'solrmss');
             return;
         } // if
 

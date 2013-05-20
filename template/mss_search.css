@@ -1,3 +1,27 @@
+/******* THEME RESET *******/
+
+.search h2 {
+	box-shadow: none;
+	border-bottom: none;
+	text-transform: none;
+} 
+
+.search h2 a {
+	color: #3A3A3A;
+    font-family: 'Lato';
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.search h2 a:hover {
+	color: #679E68;
+	text-decoration: none;
+}
+
+
+/******* THEME RESET *******/
+
 #content {
 	width: auto !important;
 }
@@ -26,9 +50,7 @@
 .solr {
 	font-size: 12px !important;
 	line-height: 1 !important;
-	margin: 0 !important;
 	padding: 20px !important;
-	width: auto !important;
 }
 div.solr1 {
 	border-bottom: 1px solid #cccccc !important;
@@ -116,7 +138,7 @@ div.solr3 {
 div.solr2 {
 	float: right !important;
 	padding: 8px 0 0 !important;
-	width: 70% !important;
+	width: 75% !important;
 }
 div.solr2_nofacets {
 	padding: 8px 0 0 !important;
@@ -128,8 +150,7 @@ div.solr_results_header {
 	padding: 0 0 4px !important;
 }
 div.solr_results_headerL {
-	width: 55% !important;
-	float: left !important;
+	float: right !important;
 	padding: 0 0 0 12px !important;
 }
 div.solr_results_headerR {
@@ -177,11 +198,9 @@ ol.solr_sort2 {
 	clear: both !important; /* IE7 */
 }
 .solr_results li {
-	border-bottom: 1px solid #e6e6e6 !important;
-	padding: 14px 12px !important;
-}
-.solr_results li:hover {
-	background: #efffb0 !important;
+	border-bottom: 1px dashed #C6BEB2 !important;
+	margin: 0 0 30px 0 !important;
+	padding: 10px 0 !important;
 }
 .solr_results img {
 	height: 50px !important;
@@ -193,13 +212,39 @@ ol.solr_sort2 {
 .solr_results h2 {
 	font-weight: normal !important;
 	line-height: 1.1 !important;
-	padding: 0 0 5px !important;
+	margin-bottom: 3px !important;
 }
+.solr_results em {
+	font-weight: bold !important;
+}
+
+.noticias .solr_results em {
+	color: #679E68;
+}
+
+.downloads .solr_results em {
+	color: #c16443;
+}
+
+.videos .solr_results em {
+	color: #7AA8C3;
+}
+
 .solr_results label {
 	font-size: 10px !important;
 	color: #666666 !important;
 	padding: 5px 0 0 !important;
 	display: block !important;
+}
+
+.solr_results span {
+	color: #3D5D3D;
+}
+
+.solr_results p {
+	font-size: 13px !important;
+	line-height: 15px !important;
+	margin-top: 10px !important;
 }
 .solr_pages {
 	font-size: 14px !important;
