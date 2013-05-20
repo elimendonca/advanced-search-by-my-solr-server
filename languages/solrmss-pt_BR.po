@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: solrmss\n"
 "POT-Creation-Date: 2013-05-17 10:35-0300\n"
-"PO-Revision-Date: 2013-05-17 10:40-0300\n"
+"PO-Revision-Date: 2013-05-18 23:54-0300\n"
 "Last-Translator: Eli Mendonça <macintoshiano@gmail.com>\n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -439,12 +439,12 @@ msgstr "%s-%s de <span id='resultcnt'>%s</span>"
 
 #: template/mss_search_custom.php:62
 msgid "Search"
-msgstr ""
+msgstr "Buscar"
 
 #: template/mss_search_custom.php:81
 #, php-format
 msgid "<div class='solr_suggest'>Did you mean: <a href='%s'>%s</a> ?</div>"
-msgstr ""
+msgstr "<div class='solr_suggest'>Você quis dizer: <a href='%s'>%s</a> ?</div>"
 
 #: template/mss_search_custom.php:108
 msgid ""
@@ -456,6 +456,13 @@ msgid ""
 "'Apple iPhone 3.0 3GS', try something simple like 'iPhone'.</p>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n"
 msgstr ""
+"<div class='solr_noresult'>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h2>Nos desculpe! Não encontramos nenhum "
+"resultado.</h2>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h3>Utilize outro termo de busca.</h3>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Por exemplo, ao invés de buscar \"Esperança "
+"para as Grandes Cidades\", tente algo como \"esperança\" ou \"cidade\".</p>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n"
 
 #: template/mss_search_custom.php:162
 #, php-format
