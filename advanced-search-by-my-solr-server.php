@@ -971,7 +971,7 @@ function mss_options_init() {
 		print ($account_info_json = getMssAccountInfo($url_mysolrserver, $url_extraparam, $name, $passwd, $proxy, $proxyport, $proxyusername, $proxypassword));
 		exit();
 	}
-
+var_dump($_REQUEST);
 	if ($action=="save") {
 		$options = mss_get_option();
 
@@ -982,8 +982,8 @@ function mss_options_init() {
 		// update mss parameters
 		$u = parse_url($options['mss_url']);
 		if ($u) {
-			$port = ($u['port']=="") ? "80" : $u['port'];
-			if ($u['host']=="") $port = "";
+			$port = (isset($u['port']) && $u['port']=="") ? "80" : $u['port'];
+			if (isset($u['host']) && $u['host']=="") $port = "";
 
 			$options['mss_solr_host']=$u['host'];
 			$options['mss_solr_port']=$port;
