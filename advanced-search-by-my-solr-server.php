@@ -955,7 +955,10 @@ function mss_gen_taxo_array($in, $vals) {
 
 
 function mss_options_init() {
-
+	$page = POSTGET("page");
+	if($page !== 'MySolrServerSettings')
+		return false;
+	
 	$action = strtolower(POSTGET("action"));
 
 	if ($action=="accountgetinfo") {
