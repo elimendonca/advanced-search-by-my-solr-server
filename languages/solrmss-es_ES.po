@@ -1,0 +1,478 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: solrmss\n"
+"POT-Creation-Date: 2013-05-17 10:35-0300\n"
+"PO-Revision-Date: 2013-05-18 23:51-0300\n"
+"Last-Translator: Eli Mendonça <macintoshiano@gmail.com>\n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: advanced-search-by-my-solr-server-options-page.php:119
+msgid "Proxy setting - Optional (for http connection to Solr server) "
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:122
+msgid "Proxy address"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:128
+msgid "Proxy port"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:134
+msgid "Proxy username (optional)"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:140
+msgid "Proxy password (optional)"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:147
+#: advanced-search-by-my-solr-server-options-page.php:209
+msgid "Apply Changes"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:151
+msgid "Configure Solr"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:159
+msgid "My Solr Server account connexion"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:162
+#: advanced-search-by-my-solr-server-options-page.php:218
+msgid "User name"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:167
+msgid "Password"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:176
+msgid "Select a Solr instance to be used with this blog"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:183
+msgid "<option value=\"\">not instance available for this account</option>"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:184
+msgid ""
+"Go to <a href='http://manager.mysolrserver.com/account.php' target='_mss'>My "
+"Solr Server Manager</a> and create a Wordpress Solr instance for this "
+"account !"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:187
+msgid "<option value=\"\">not available (connect first)</option>"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:191
+msgid "<option value=\"\">choose an instance in the list</option>"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:217
+msgid "My Solr Server account details"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:219
+msgid "Plan type"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:220
+msgid "Plan status"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:221
+msgid "Plan expires"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:229
+msgid "Solr instance settings"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:230
+msgid "Solr Host"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:232
+msgid "Solr Port"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:234
+msgid "Solr Path"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:237
+msgid "Check Solr instance settings"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:244
+msgid ""
+"Select the rigth option according to your Solr Server hosting configuration"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:249
+msgid ""
+"Before setting up <strong>My Solr Server plugin</strong>, you need to "
+"download, install and configure your own <a href=\"http://lucene.apache.org/"
+"solr/\">Apache Solr Server</a> instance"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:253
+msgid "My Solr Server hosted"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:255
+msgid ""
+"Before setting up <strong>My Solr Server plugin</strong>, you need to <a "
+"href=\"http://manager.mysolrserver.com/account.php\" target=\"_mss\">create "
+"an account on My Solr Server</a> (one month free trial)."
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:263
+msgid "Indexing Options"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:266
+msgid "Post types to be indexed"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:268
+msgid "Posts"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:269
+msgid "Pages"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:290
+msgid "Custom Taxonomies to be indexed"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:318
+msgid "Custom Fields to be indexed"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:347
+msgid "Index Comments"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:351
+msgid "Exclude items (posts, pages, ...)<br />(comma separated ids list)"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:357
+msgid "Result Options"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:360
+msgid "Enable Spellchecking"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:362
+msgid "Output Result Info"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:367
+msgid "Number of Results Per Page"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:372
+msgid "Max Number of Tags to Display"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:377
+msgid "Output Facets"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:379
+msgid "Category Facet as Taxonomy"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:385
+msgid "Facets Options"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:389
+msgid "Available items for facets"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:393
+msgid "Selected items for facets"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:395
+msgid "Include these selected items in search scope"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:406
+msgid "Save Changes"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:412
+msgid "Actions"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:415
+msgid "Load content"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:418
+msgid "Optimize Index"
+msgstr ""
+
+#: advanced-search-by-my-solr-server-options-page.php:422
+msgid "Delete All"
+msgstr ""
+
+#: advanced-search-by-my-solr-server.inc.php:281
+msgid "Post Information is NULL"
+msgstr ""
+
+#: advanced-search-by-my-solr-server.php:56
+msgid "Advanced Search by My Solr Server"
+msgstr ""
+
+#: advanced-search-by-my-solr-server.php:61
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: advanced-search-by-my-solr-server.php:66
+msgid "<p>Couldn't locate the options page.</p>"
+msgstr ""
+
+#: advanced-search-by-my-solr-server.php:75
+#: advanced-search-by-my-solr-server.php:495
+#: advanced-search-by-my-solr-server.php:498
+#: advanced-search-by-my-solr-server.php:501
+#: advanced-search-by-my-solr-server.php:520
+#: advanced-search-by-my-solr-server.php:523
+#: advanced-search-by-my-solr-server.php:526
+#, php-format
+msgid ""
+"<link rel=\"stylesheet\" href=\"%s\" type=\"text/css\" media=\"screen\" />\n"
+msgstr ""
+
+#: advanced-search-by-my-solr-server.php:667
+msgid ""
+"<option value=\"score\">Score</option><option value=\"date\" selected="
+"\"selected\">Date</option><option value=\"modified\">Last Modified</option>"
+msgstr ""
+
+#: advanced-search-by-my-solr-server.php:669
+msgid ""
+"<option value=\"score\">Score</option><option value=\"date\">Date</"
+"option><option value=\"modified\" selected=\"selected\">Last Modified</"
+"option>"
+msgstr ""
+
+#: advanced-search-by-my-solr-server.php:671
+msgid ""
+"<option value=\"score\" selected=\"selected\">Score</option><option value="
+"\"date\">Date</option><option value=\"modified\">Last Modified</option>"
+msgstr ""
+
+#: advanced-search-by-my-solr-server.php:675
+msgid ""
+"<option value=\"desc\">Descending</option><option value=\"asc\" selected="
+"\"selected\">Ascending</option>"
+msgstr ""
+
+#: advanced-search-by-my-solr-server.php:677
+msgid ""
+"<option value=\"desc\" selected=\"selected\">Descending</option><option "
+"value=\"asc\">Ascending</option>"
+msgstr ""
+
+#: advanced-search-by-my-solr-server.php:680
+#, php-format
+msgid ""
+"<form name=\"searchbox\" method=\"get\" id=\"searchbox\" action=\"\"><input "
+"type=\"text\" id=\"qrybox\" name=\"s\" value=\"%s\"/><input type=\"submit\" "
+"id=\"searchbtn\" /><label for=\"sortselect\" id=\"sortlabel\">Sort By:</"
+"label><select name=\"sort\" id=\"sortselect\">%s</select><label for="
+"\"orderselect\" id=\"orderlabel\">Order By:</label><select name=\"order\" id="
+"\"orderselect\">%s</select></form>"
+msgstr ""
+
+#: advanced-search-by-my-solr-server.php:723
+#, php-format
+msgid "%s:&nbsp;%s"
+msgstr ""
+
+#: advanced-search-by-my-solr-server.php:733
+#, php-format
+msgid "?s=%s&fq=%s"
+msgstr ""
+
+#: advanced-search-by-my-solr-server.php:735
+#, php-format
+msgid "?s=%s"
+msgstr ""
+
+#: advanced-search-by-my-solr-server.php:757
+#: advanced-search-by-my-solr-server.php:783
+#: advanced-search-by-my-solr-server.php:791
+#: advanced-search-by-my-solr-server.php:827
+#: advanced-search-by-my-solr-server.php:930
+#, php-format
+msgid "%d"
+msgstr ""
+
+#: advanced-search-by-my-solr-server.php:760
+#, php-format
+msgid "%.3f"
+msgstr ""
+
+#: advanced-search-by-my-solr-server.php:766
+#, php-format
+msgid "?s=%s&isdym=1"
+msgstr ""
+
+#: advanced-search-by-my-solr-server.php:785
+#, php-format
+msgid "?s=%s&offset=%d&count=%d"
+msgstr ""
+
+#: advanced-search-by-my-solr-server.php:828
+#: advanced-search-by-my-solr-server.php:931
+#, php-format
+msgid "?s=%s&fq=%s:%s%s"
+msgstr ""
+
+#: advanced-search-by-my-solr-server.php:870
+#, php-format
+msgid "...%s..."
+msgstr ""
+
+#: advanced-search-by-my-solr-server.php:874
+#, php-format
+msgid "%s..."
+msgstr ""
+
+#: advanced-search-by-my-solr-server.php:912
+#: advanced-search-by-my-solr-server.php:916
+#, php-format
+msgid "%s\n"
+msgstr ""
+
+#: advanced-search-by-my-solr-server.php:914
+#, php-format
+msgid "%s<a href=\"%s\">%s (%s)</a>%s\n"
+msgstr ""
+
+#: lib/std.encryption.class.inc.php:79
+msgid "No value has been supplied for decryption"
+msgstr ""
+
+#: lib/std.encryption.class.inc.php:138
+msgid "No value has been supplied for encryption"
+msgstr ""
+
+#: lib/std.encryption.class.inc.php:266
+msgid "No value has been supplied for the encryption key"
+msgstr ""
+
+#: template/mss_search_custom.php:15
+msgid "Seção"
+msgstr "Sección"
+
+#: template/mss_search_custom.php:17
+msgid "Editorias"
+msgstr "Editoriales"
+
+#: template/mss_search_custom.php:19
+msgid "Projetos"
+msgstr "Proyectos"
+
+#: template/mss_search_custom.php:21
+msgid "Departamentos"
+msgstr ""
+
+#: template/mss_search_custom.php:23
+msgid "Região"
+msgstr "Región"
+
+#: template/mss_search_custom.php:25
+msgid "Coleções"
+msgstr "Colecciones"
+
+#: template/mss_search_custom.php:27
+msgid "Tipos de Mídia"
+msgstr "Tipos de Medios"
+
+#: template/mss_search_custom.php:29
+msgid "Tipos de Material"
+msgstr "Tipos de Materiales"
+
+#: template/mss_search_custom.php:31
+msgid "Eventos"
+msgstr ""
+
+#: template/mss_search_custom.php:33
+msgid "Sede Proprietária"
+msgstr "Sede Proprietaria"
+
+#: template/mss_search_custom.php:35
+msgid "Sede Regional"
+msgstr ""
+
+#: template/mss_search_custom.php:53
+#, php-format
+msgid "Displaying result %s of <span id='resultcnt'>%s</span> hits"
+msgstr "%s de <span id='resultcnt'>%s</span>"
+
+#: template/mss_search_custom.php:55
+#, php-format
+msgid "Displaying results %s-%s of <span id='resultcnt'>%s</span> hits"
+msgstr "%s-%s de <span id='resultcnt'>%s</span>"
+
+#: template/mss_search_custom.php:62
+msgid "Search"
+msgstr "Búsqueda"
+
+#: template/mss_search_custom.php:81
+#, php-format
+msgid "<div class='solr_suggest'>Did you mean: <a href='%s'>%s</a> ?</div>"
+msgstr ""
+"<div class='solr_suggest'>¿Quisiste decor: <strong><a href='%s'>%s</a></"
+"strong> ?</div>"
+
+#: template/mss_search_custom.php:108
+msgid ""
+"<div class='solr_noresult'>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h2>Sorry, no results were found.</h2>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h3>Perhaps you mispelled your search query, "
+"or need to try using broader search terms.</h3>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>For example, instead of searching for "
+"'Apple iPhone 3.0 3GS', try something simple like 'iPhone'.</p>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n"
+msgstr ""
+"<div class='solr_noresult'>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h2>Disculpa, no encontramos resultados.</h2>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h3>Quizás buscas algo inexistente o necesitas "
+"usar otros términos de búsqueda.</h3>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Por ejemplo, en vez de buscar 'Esperanza "
+"para las Grandes Ciudades', intenta algo simple como 'esperanza' ou 'ciudad'."
+"</p>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n"
+
+#: template/mss_search_custom.php:162
+#, php-format
+msgid "<a href='%s'>Previous</a>"
+msgstr "<a href='%s'>Anterior</a>"
+
+#: template/mss_search_custom.php:170
+#, php-format
+msgid "<a href='%s'>Next</a>"
+msgstr "<a href='%s'>Próximo</a>"

@@ -53,12 +53,12 @@ THE SOFTWARE.
 require_once("advanced-search-by-my-solr-server.inc.php");
 
 function mss_plugin_admin_menu() {
-	add_options_page('Advanced Search by My Solr Server', 'Advanced Search by My Solr Server', 'manage_options', 'MySolrServerSettings', 'mss_plugin_admin_settings');
+	add_options_page(__('Advanced Search by My Solr Server', 'solrmss'), __('Advanced Search by My Solr Server', 'solrmss'), 'manage_options', 'MySolrServerSettings', 'mss_plugin_admin_settings');
 }
 
 function mss_plugin_admin_settings() {
 	if (!current_user_can('manage_options'))  {
-		wp_die( __('You do not have sufficient permissions to access this page.') );
+		wp_die( __('You do not have sufficient permissions to access this page.', 'solrmss') );
 	}
 	if ( file_exists ( dirname(__FILE__) . '/advanced-search-by-my-solr-server-options-page.php' )) {
 		include( dirname(__FILE__) . '/advanced-search-by-my-solr-server-options-page.php' );
@@ -260,10 +260,10 @@ function mss_admin_head() {
 						var url = $('#mss_instances').val();
 						var instances = resp.instances;
 						if (instances.length==0) {
-							var options = "<option value=''>not available (connect first)</option>";
+							var options = __("<option value=''>not available (connect first)</option>", 'solrmss');
 						}
 						else {
-							var options = "<option value=''>choose an instance in the list</option>";
+							var options = __("<option value=''>choose an instance in the list</option>", 'solrmss');
 						}
 						for (var i=0; i<instances.length; i++) {
 							options += "<option value='" + instances[i].url + "'";
@@ -955,7 +955,10 @@ function mss_gen_taxo_array($in, $vals) {
 
 
 function mss_options_init() {
-
+	$page = POSTGET("page");
+	if($page !== 'MySolrServerSettings')
+		return false;
+	
 	$action = strtolower(POSTGET("action"));
 
 	if ($action=="accountgetinfo") {
@@ -971,7 +974,7 @@ function mss_options_init() {
 		print ($account_info_json = getMssAccountInfo($url_mysolrserver, $url_extraparam, $name, $passwd, $proxy, $proxyport, $proxyusername, $proxypassword));
 		exit();
 	}
-
+var_dump($_REQUEST);
 	if ($action=="save") {
 		$options = mss_get_option();
 
@@ -982,8 +985,8 @@ function mss_options_init() {
 		// update mss parameters
 		$u = parse_url($options['mss_url']);
 		if ($u) {
-			$port = ($u['port']=="") ? "80" : $u['port'];
-			if ($u['host']=="") $port = "";
+			$port = (isset($u['port']) && $u['port']=="") ? "80" : $u['port'];
+			if (isset($u['host']) && $u['host']=="") $port = "";
 
 			$options['mss_solr_host']=$u['host'];
 			$options['mss_solr_port']=$port;
@@ -1143,15 +1146,16 @@ function mss_options_init() {
 		mss_load_all($options, $prev);
 		exit();
 	}
-	}
+}
 
-	add_action( 'template_redirect', 'mss_template_redirect', 1 );
-	add_action( 'publish_post', 'mss_handle_modified' );
-	add_action( 'publish_page', 'mss_handle_modified' );
-	add_action( 'save_post', 'mss_handle_save' );
-	add_action( 'edit_post', 'mss_handle_status_change' );
-	add_action( 'delete_post', 'mss_handle_delete' );
-	add_action( 'admin_init', 'mss_options_init');
+add_action( 'template_redirect', 'mss_template_redirect', 1 );
+add_action( 'publish_post', 'mss_handle_modified' );
+add_action( 'publish_page', 'mss_handle_modified' );
+add_action( 'save_post', 'mss_handle_save' );
+add_action( 'edit_post', 'mss_handle_status_change' );
+add_action( 'delete_post', 'mss_handle_delete' );
+add_action( 'admin_init', 'mss_options_init');
 
-	add_action( 'wp_head', 'mss_autosuggest_head');
-	?>
+add_action( 'wp_head', 'mss_autosuggest_head');
+
+load_plugin_textdomain( 'solrmss', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
