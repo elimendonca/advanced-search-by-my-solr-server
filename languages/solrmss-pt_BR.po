@@ -21,7 +21,7 @@ msgstr ""
 
 #: advanced-search-by-my-solr-server-options-page.php:122
 msgid "Proxy address"
-msgstr ""
+msgstr "Endereço do Proxy"
 
 #: advanced-search-by-my-solr-server-options-page.php:128
 msgid "Proxy port"
