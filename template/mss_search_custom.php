@@ -48,19 +48,23 @@ function facetsRename ( $facet ) {
 		<div class="solr_search">
 		    <div class="solr_results_headerL">
 
-				<?php if ($results['hits'] && $results['query'] && $results['qtime']) {
+				<?php 
+				$term = $results['query'];
+				printf(__("<div class='search-term'>Resultados para: <span>". $term ."</span></div>", 'solrmss'));
+
+				if ($results['hits'] && $results['query'] && $results['qtime']) {
 				    if ($results['firstresult'] === $results['lastresult']) {
-				        printf(__("Displaying result %s of <span id='resultcnt'>%s</span> hits", 'solrmss'), $results['firstresult'], $results['hits']);
+				        printf(__("<div class='search-counter'>%s of <span id='resultcnt'>%s</span></div>", 'solrmss'), $results['firstresult'], $results['hits']);
 				    } else {
-				        printf(__("Displaying results %s-%s of <span id='resultcnt'>%s</span> hits", 'solrmss'), $results['firstresult'], $results['lastresult'], $results['hits']);
+				        printf(__("<div class='search-counter'>%s-%s of <span id='resultcnt'>%s</span></div>", 'solrmss'), $results['firstresult'], $results['lastresult'], $results['hits']);
                     }
 				} ?>
 
 			</div>
 
-            <form name="searchbox" method="get" id="searchbox" action="">
+            <?php /* <form name="searchbox" method="get" id="searchbox" action="">
 			    <input id="qrybox" name="s" type="text" class="solr_field" value="<?php echo $results['query'] ?>"/><input id="searchbtn" type="submit" value="<?php _e('Search', 'solrmss');?>" />
-            </form>
+            </form> */ ?>
             <ul class="solr_facets">
             <li class="solr_active">
 				<ol>
@@ -115,9 +119,9 @@ function facetsRename ( $facet ) {
 					foreach($results['results'] as $result) {
 							printf("<li>");
 							printf("<h2><a href='%s'>%s</a></h2>\n", $result['permalink'], $result['title']);
-							printf("<span>%s</span>\n", $result['permalink']);
+							/* printf("<span>%s</span>\n", $result['permalink']); */
 							printf("<p>%s</p>\n", $result['teaser']);
-							/*printf("<p>%s <a href='%s'>(comment match)</a></p>\n", $result['teaser'], $result['comment_link']);
+							/* printf("<p>%s <a href='%s'>(comment match)</a></p>\n", $result['teaser'], $result['comment_link']);
 							printf("<label> By <a href='%s'>%s</a> in %s %s - <a href='%s'>%s comments</a></label>\n", 
 							            $result['authorlink'], 
 							            $result['author'], 
