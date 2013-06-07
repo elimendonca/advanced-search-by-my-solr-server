@@ -974,7 +974,7 @@ function mss_options_init() {
 		print ($account_info_json = getMssAccountInfo($url_mysolrserver, $url_extraparam, $name, $passwd, $proxy, $proxyport, $proxyusername, $proxypassword));
 		exit();
 	}
-var_dump($_REQUEST);
+
 	if ($action=="save") {
 		$options = mss_get_option();
 
