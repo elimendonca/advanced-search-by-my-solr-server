@@ -43,7 +43,7 @@
 .solr ol, .solr ul, .solr ol li, .solr ul li {
 	background: none;
 	list-style-type: none;
-	overflow: hidden; /* IE7 */
+	/*overflow: hidden;  IE7 */
 }
 .solr h2 {font-size:16px;}
 .solr h3 {font-size:14px;}

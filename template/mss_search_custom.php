@@ -11,7 +11,12 @@ function spanOrder($sort, $order, $thisSpan) {
 }
 
 function facetsRename ( $facet ) {
-	 switch ($facet) {
+	$facet_info = $facet;
+	$facet_original = false;
+	if(strpos($facet, '&nbsp')) {
+		$facet_original = $facet = substr($facet, 0, strpos($facet, ':'));
+	}
+	switch ($facet) {
 		case "Xtt-pa-secao" : $facet = __("Seção", 'solrmss');
 			break;
 		case "Xtt-pa-editorias" : $facet = __("Editorias", 'solrmss');
@@ -35,6 +40,11 @@ function facetsRename ( $facet ) {
 		case "Xtt-pa-sedes" : $facet = __("Sede Regional", 'solrmss');
 			break;
 	}
+	if($facet_original) {
+		$facet = str_replace($facet_original, $facet, $facet_info);
+	}
+
+
 	return $facet;
 }
 
