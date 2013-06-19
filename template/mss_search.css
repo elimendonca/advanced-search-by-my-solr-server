@@ -56,11 +56,10 @@
 }
 div.solr1 {
 	border-bottom: 1px solid #cccccc;
-	padding: 0 0 6px;
+	padding: 0 0 10px;
 }
 div.solr_search {
 	clear: both;
-	padding: 0 0 12px;
 }
 div.solr_search input {
 	font-size: 18px;
@@ -134,9 +133,41 @@ div.solr3 {
 .solr_active ol li {
 	padding: 3px 0;
 }
-.solr_active a {
-	color: #000000;
+
+.solr_facets {
+	display: block;
+	margin-bottom: 15px;
 }
+
+.solr_active {
+	width: auto;
+	float: left;
+}
+.solr_active a, .solr_active a:visited  {
+	color: #000000;
+	padding: 3px 6px;
+	background: #d9d4c5;
+	border-radius: 3px;
+	text-shadow: none;
+	font-size: 11px;
+	padding: 2px 6px;
+	margin-right: 10px;
+}
+
+.solr_active a:hover {
+	background: #e7e4db;
+}
+
+.solr_active b {
+	margin-right: 5px;
+	color: #000;
+	border-radius: 3px;
+	text-shadow: none;
+	font-size: 11px;
+	text-align: center;
+}
+
+
 div.solr2 {
 	float: right;
 	padding: 8px 0 0;
