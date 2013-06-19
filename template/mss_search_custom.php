@@ -71,22 +71,21 @@ function facetsRename ( $facet ) {
 				} ?>
 
 			</div>
-
             <?php /* <form name="searchbox" method="get" id="searchbox" action="">
 			    <input id="qrybox" name="s" type="text" class="solr_field" value="<?php echo $results['query'] ?>"/><input id="searchbtn" type="submit" value="<?php _e('Search', 'solrmss');?>" />
             </form> */ ?>
-            <ul class="solr_facets">
-            <li class="solr_active">
-				<ol>
-					<?php 
+            <ul class="solr_facets clearfix">
+				<?php 
 					if ($results['facets']['selected']) {
 					    foreach( $results['facets']['selected'] as $selectedfacet) {
-					        printf("<li><span></span><a href=\"%s\">%s&nbsp;<b>x</b></a></li>", $selectedfacet['removelink'], facetsRename($selectedfacet['name']));
+					        printf(
+					        	"<li class='solr_active'><a href=\"%s\"><b>x</b> %s</a></li>"
+					        	, $selectedfacet['removelink']
+					        	, facetsRename($selectedfacet['name'])
+					        );
 					    }
 					} 
-					?>
-				</ol>
-			</li>
+				?>
 			</ul>
             
 		</div>
