@@ -1,6 +1,6 @@
 <?php
 /*
- Plugin Name: Advanced Search by www.mysolrserver.com
+ Plugin Name: Advanced Search by www.mysolrserver.com - iDSA
 Plugin URI: http://wordpress.org/extend/plugins/advanced-search-by-my-solr-server/
 Description: Indexes, removes, and updates documents in the Solr search engine.
 Version: 2.0.4
