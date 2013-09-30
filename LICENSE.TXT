@@ -1,13 +1,7 @@
 === Project summary ===
-<<<<<<< HEAD
 Plugin Name: Advanced Search by www.mysolrserver.com
 Plugin URI: http://wordpress.org/extend/plugins/advanced-search-by-my-solr-server/
 Description: Indexes, removes, and updates documents in the Solr search engine.
-=======
-Plugin Name: Advanced Search by My Solr Server
-Plugin URI: http://wordpress.org/extend/plugins/browse-content-by-my-solr-server/
-Description: Browse Content by My Solr Server widget allows to navigate through WordPress content by standard WordPress attributes (categories, tags and authors) and custom fields.
->>>>>>> fff9c6adc0826763c83358f52a4e5afe5c1b3889
 Author: www.mysolrserver.com
 Author URI: http://www.mysolrserver.com
 
@@ -32,7 +26,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-<<<<<<< HEAD
 
 
 === History ===
@@ -60,5 +53,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-=======
->>>>>>> fff9c6adc0826763c83358f52a4e5afe5c1b3889
