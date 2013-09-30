@@ -66,20 +66,8 @@ function mss_checkConnectOption($optionType, $connectType) {
  <div class="wrap">
   	<div id="icon-options-general" class="icon32"><br /></div>
 	<div id="mss_admin">
-
   		<h2>Advanced Search by My Solr Server Settings</h2>
-
 		<p><strong>Advanced Search by My Solr Server</strong> plugin replaces the default WordPress search with powerfull <strong>Solr search</strong>.</p>
-
-<!--  
-		<p><a href='http://wordpress.org/extend/plugins/solr-for-wordpress/' target='_mss'>Solr for Wordpress plugin</a> have to be installed prior to use 
-		<a href='http://www/mysolrserver.com/' target='_mss'>My Solr Server</a> plugin. <strong>Solr for Wordpress</strong> plugin replaces the default WordPress search with Solr search.</p>
-
-		<p><strong>Solr for Wordpress plugin</strong> requieres you to install <a href='http://lucene.apache.org/solr/' target='_mss'>Solr</a>. If you don't 
-		have the time or resources to install, configure and maintain <strong>Solr</strong>, <a href='http://www/mysolrserver.com/' target='_mss'>My Solr Server</a> can host it for you !</p>
-
-		<p>Before setting up <strong>My Solr Server plugin</strong>, you need to <a href='http://manager.mysolrserver.com/account.php' target='_mss'>create an account on My Solr Server</a> (one month free trial).</p>
--->		
 <?php 
 $mss_id = $options['mss_id'];
 $mss_passwd = decrypt($options['mss_passwd']);
@@ -144,7 +132,7 @@ if ($connect_type!="mysolrserver" && $connect_type!="selfhosted") $connect_type 
 			</tr>
 					<tr>
 						<td class="label">&nbsp;</td>
-						<td><input class="button-primary" type="button" name="mss_btn_save_proxy" id="mss_btn_save_proxy" value="<?php _e('Apply Changes', 'solrmss');?>" /><span id="mss_save_proxy_status"></span></td>
+						<td><input class="button-primary" type="button" name="mss_btn_save_proxy" id="mss_btn_save_proxy" value="Apply Changes" /><span id="mss_save_proxy_status"></span></td>
 					</tr>
 			</table>
 
@@ -154,17 +142,18 @@ if ($connect_type!="mysolrserver" && $connect_type!="selfhosted") $connect_type 
 			<div class="solr_adminR">
 							
 				<div class="solr_adminR2">
+<!--
 				<div id="solr_admin_tab_mysolrserver">
 		
-					<h3><?php _e('My Solr Server account connexion', 'solrmss') ?></h3>
+					<h3><?php _e('My Solr Server account connexion', 'mss') ?></h3>
 					<table>
 					<tr>
-						<td class="label"><label><?php _e('User name', 'solrmss') ?></label></td>
+						<td class="label"><label><?php _e('User name', 'mss') ?></label></td>
 						<td><input type="text" name="settings[mss_id]" id="mss_id" value="<?php print($mss_id); ?>" autocomplete="off" /></td>
 						<td>&nbsp;</td>
 					</tr>
 					<tr>
-						<td class="label"><label><?php _e('Password', 'solrmss') ?></label></td>
+						<td class="label"><label><?php _e('Password', 'mss') ?></label></td>
 						<td><input type="password" name="settings[mss_passwd]" id="mss_passwd" value="<?php print($mss_passwd); ?>" autocomplete="off" /></td>
 						<td>&nbsp;</td>
 					</tr>
@@ -173,22 +162,22 @@ if ($connect_type!="mysolrserver" && $connect_type!="selfhosted") $connect_type 
 						<td colspan="2"><input class="button-primary" type="button" name="mss_btn_connect" id="mss_btn_connect" value="Connect" /><span id="mss_connect_status"></span></td>
 					</tr>
 					<tr>
-						<td class="label"><label><?php _e('Select a Solr instance to be used with this blog', 'solrmss') ?></label></td>
+						<td class="label"><label><?php _e('Select a Solr instance to be used with this blog', 'mss') ?></label></td>
 						<td><select name="settings[mss_url]" id="mss_instances">
 <?php 	
 $url_matching = false;	
 $message = "";	
 if (!is_array($account_instances) || (count($account_instances)==0)) {
 	if ($connected) {
-		print (__('<option value="">not instance available for this account</option>', 'solrmss'));
-		$message = __("Go to <a href='http://manager.mysolrserver.com/account.php' target='_mss'>My Solr Server Manager</a> and create a Wordpress Solr instance for this account !", 'solrmss');
+		print ('<option value="">not instance available for this account</option>');
+		$message = "Go to <a href='http://manager.mysolrserver.com/account.php' target='_mss'>My Solr Server Manager</a> and create a Wordpress Solr instance for this account !";
 	}
 	else {
-		print (__('<option value="">not available (connect first)</option>', 'solrmss'));
+		print ('<option value="">not available (connect first)</option>');
 	}
 }
 else {
-	print (__('<option value="">choose an instance in the list</option>', 'solrmss'));
+	print ('<option value="">choose an instance in the list</option>');
 	for ($i=0;$i<count($account_instances);$i++) {
 		print ('<option value="' . $account_instances[$i]['url'] . '"');
 		if ($mss_url==$account_instances[$i]['url']) {
@@ -206,7 +195,7 @@ else {
 					</tr>
 					<tr>
 						<td class="label">&nbsp;</td>
-						<td colspan="2"><input class="button-primary" type="button" name="mss_btn_save" id="mss_btn_save" value="<?php _e('Apply Changes', 'solrmss');?>" /><span id="mss_save_status"></span></td>
+						<td colspan="2"><input class="button-primary" type="button" name="mss_btn_save" id="mss_btn_save" value="Apply Changes" /><span id="mss_save_status"></span></td>
 					</tr>
 					</table>
 			
@@ -214,19 +203,20 @@ else {
 if ($account_plan!="") {
 ?>		
 					<hr />
-					<h3><?php _e('My Solr Server account details', 'solrmss') ?></h3>
-					<?php _e('User name', 'solrmss');?> : <?php echo $mss_id; ?><br/>
-					<?php _e('Plan type', 'solrmss');?> : <?php echo $account_plan; ?><br/>
-					<?php _e('Plan status', 'solrmss');?> : <?php echo $account_status; ?><br/>
-					<?php _e('Plan expires', 'solrmss');?> : <?php echo $account_expire; ?><br/><br/>
+					<h3><?php _e('My Solr Server account details', 'mss') ?></h3>
+					User name : <?php echo $mss_id; ?><br/>
+					Plan type : <?php echo $account_plan; ?><br/>
+					Plan status : <?php echo $account_status; ?><br/>
+					Plan expires : <?php echo $account_expire; ?><br/><br/>
 			
 <?php 
 }
 ?>
 					<hr />		
 				</div>
+-->
 				<div id="solr_admin_tab_selfhosted">
-					<h3><?php _e('Solr instance settings', 'solrmss') ?></h3>
+					<h3><?php _e('Solr instance settings', 'mss') ?></h3>
 					<label><?php _e('Solr Host', 'solrmss') ?></label>
 					<input type="text" id="mss_solr_host" name="settings[mss_solr_host]" value="<?php _e($options['mss_solr_host'], 'solrmss'); ?>" /><br /><br />
 					<label><?php _e('Solr Port', 'solrmss') ?></label>
@@ -239,24 +229,26 @@ if ($account_plan!="") {
 				</div>
 				</div>
 			</div>
+<!-- 
 			<ol>
 				<li id="solr_admin_tab_top_btn" class="solr_admin_tab_top">
-				<?php _e('Select the rigth option according to your Solr Server hosting configuration', 'solrmss');?>
+				Select the rigth option according to your Solr Server hosting configuration
 				</li>
 				<li id="solr_admin_tab_selfhosted_btn" class="solr_admin_tab_center">
 					<strong><input id="selfhosted" name="settings[mss_connect_type]" type="radio" value="selfhosted" <?php mss_checkConnectOption($connect_type, 'selfhosted'); ?> onclick="mss_switch1();" />&nbsp;Self hosted</strong>
 					<ol>
-						<?php _e('Before setting up <strong>My Solr Server plugin</strong>, you need to download, install and configure your own <a href="http://lucene.apache.org/solr/">Apache Solr Server</a> instance', 'solrmss');?>
+						Before setting up <strong>My Solr Server plugin</strong>, you need to download, install and configure your own <a href="http://lucene.apache.org/solr/">Apache Solr Server</a> instance
 					</ol>
 				</li>
 				<li id="solr_admin_tab_mysolrserver_btn" class="solr_admin_tab_center_last">
-					<strong><input id="mysolrserver" name="settings[mss_connect_type]" type="radio" value="mysolrserver" <?php mss_checkConnectOption($connect_type, 'mysolrserver'); ?> onclick="mss_switch1();" />&nbsp;<?php _e('My Solr Server hosted', 'solrmss');?></strong>
+					<strong><input id="mysolrserver" name="settings[mss_connect_type]" type="radio" value="mysolrserver" <?php mss_checkConnectOption($connect_type, 'mysolrserver'); ?> onclick="mss_switch1();" />&nbsp;My Solr Server hosted</strong>
 					<ol>
-						<?php _e('Before setting up <strong>My Solr Server plugin</strong>, you need to <a href="http://manager.mysolrserver.com/account.php" target="_mss">create an account on My Solr Server</a> (one month free trial).', 'solrmss');?>
+						Before setting up <strong>My Solr Server plugin</strong>, you need to <a href='http://manager.mysolrserver.com/account.php' target='_mss'>create an account on My Solr Server</a> (one month free trial).
 					</ol>
 				</li>
 				<li id="solr_admin_tab_bottom_btn" class="solr_admin_tab_bottom"></li>
 			</ol>
+-->
 		</div>
 		<hr />	
 		
@@ -265,8 +257,8 @@ if ($account_plan!="") {
 		    <tr valign="top">
 		        <th scope="row" style="width:200px;"><?php _e('Post types to be indexed', 'solrmss') ?></th>
 		        <td style="float:left;">
-		        <span class="nobr"><input type="checkbox" name="post_types" value="post" <?php mss_checkCheckboxInGroup( $options['mss_post_types'], "post" ); ?> />&nbsp;<?php _e('Posts', 'solrmss');?>&nbsp;&nbsp;</span>
-		        <span class="nobr"><input type="checkbox" name="post_types" value="page" <?php mss_checkCheckboxInGroup( $options['mss_post_types'], "page" ); ?> />&nbsp;<?php _e('Pages', 'solrmss');?>&nbsp;&nbsp;</span>		        		        
+		        <span class="nobr"><input type="checkbox" name="post_types" value="post" <?php mss_checkCheckboxInGroup( $options['mss_post_types'], "post" ); ?> />&nbsp;Posts&nbsp;&nbsp;</span>
+		        <span class="nobr"><input type="checkbox" name="post_types" value="page" <?php mss_checkCheckboxInGroup( $options['mss_post_types'], "page" ); ?> />&nbsp;Pages&nbsp;&nbsp;</span>		        		        
 <?php 		        
 	$args=array(
   		'public'   => true,
@@ -348,7 +340,7 @@ none
 		        <td style="width:10px;float:left;"><input type="checkbox" name="settings[mss_index_comments]" value="1" <?php echo mss_checkCheckbox($options,'mss_index_comments'); ?> /></td>
 		    </tr>
 		    <tr valign="top">
-		        <th scope="row"><?php _e('Exclude items (posts, pages, ...)<br />(comma separated ids list)', 'solrmss') ?></th>
+		        <th scope="row"><?php _e('Exclude items (posts, pages, ...)<br />(comma separated ids list)') ?></th>
 		        <td><input type="text" name="settings[mss_exclude_pages]" value="<?php echo $options['mss_exclude_pages']; ?>" style="width:400px;"/></td>
 		    </tr>
  		</table>
@@ -386,11 +378,11 @@ none
 		<table class="facet-form-table">
 	    	<tr valign="top">
 	        	<td scope="row" style="width:200px;">
-	        		<h4><?php _e('Available items for facets', 'solrmss');?></h4>
+	        		<h4>Available items for facets</h4>
 	        		<div id='available_facets'></div>
 	        	</td>
 	        	<td scope="row" style="width:200px;">
-	        		<h4><?php _e('Selected items for facets', 'solrmss');?></h4>
+	        		<h4>Selected items for facets</h4>
 	        		<!--
 	        		<?php _e('Include these selected items in search scope', 'solrmss') ?>
 		            <input type="checkbox" name="settings[mss_facets_search]" value="1" <?php echo mss_checkCheckbox($options,'mss_facets_search'); ?> />
@@ -403,7 +395,7 @@ none
 		</table>
 		<br />
 <!-- input type="hidden" name="action" value="saveall" -->
-<input class="button-primary" type="button" name="mss_btn_save_options" id="mss_btn_save_options" value="<?php _e('Save Changes', 'solrmss');?>" /><span id="mss_save_option_status"></span>
+<input class="button-primary" type="button" name="mss_btn_save_options" id="mss_btn_save_options" value="Save Changes" /><span id="mss_save_option_status"></span>
 		<hr />
 
 
